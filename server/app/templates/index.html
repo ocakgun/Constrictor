@@ -1,0 +1,15 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>File Recovery</h1>
+    Enter your details if you wish to recover your files. Simply copy/paste what is asked from the program to these
+    boxes then press Submit.<br>
+      <form class="navbar-form navbar-left" role="euid" action = "/user_p" method = "POST">
+        <div class="form-group">
+          <input type="text" name="enteruid" class="form-control" placeholder="Paste your User ID"><br>
+          <input type="text" name="enterdata" class="form-control" placeholder="Paste your User Data">
+        </div>
+        <button type="submit" value="submit" class="btn btn-primary btn-sm">Submit</button>
+      </form>
+{% endblock %}

