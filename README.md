@@ -2,7 +2,7 @@ Constrictor
 An example of really simple ransomware in Python 2.7, using PyCrypto for the ransomware client and Flask for the server.
 I could have made this more refined, intricate and complete; using the actual secure AES-CBC and GPG algorithms and a python bitcoin client, but the point isin't a deployable malware, just something to mess around with.
 
-Intended ONLY for educational and research purposes. Ransomware-using criminals are worst than Hitler.
+Intended ONLY for educational and research purposes! Ransomware-using criminals are worst than Hitler.
 
 Features:
 - Stupid simple and lightweight
@@ -16,6 +16,7 @@ Requirements:
 - Python 2.7
 - PyCrypto
 - Flask
+- Easygui
 
 How it works:
 - I recommend running constrictor.py from a shell or IDLE; because it prints out the decryption key and you can run decrypt_dir if necessary.
